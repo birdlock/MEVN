@@ -1,5 +1,6 @@
 <template>
-<b-col col lg="12">
+
+<b-col col lg="3">
   <div class="posts">
     <h1>Posts</h1>
     <div v-if="posts.length > 0" class="table-wrap">
