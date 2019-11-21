@@ -1,17 +1,20 @@
 <template>
-  <div class="posts">
-    <h1>Posts</h1>
+<b-container class="bv-example-row">
+  <b-row>
+    <b-col></b-col>
+    <b-col>
+         <h1>Posts</h1>
     <div v-if="posts.length > 0" class="table-wrap">
       <div>
         <router-link  v-bind:to="{ name: 'NewPost' }" class="add_post_link">Add Post</router-link>
       </div>
       <br>
-    <b-col col lg="12">
+    <b-col col lg="12" md='8' sm='12'>
       <table>
         <tr>
           <td>Title</td>
-          <td width="550">Description</td>
-          <td width="100" align="center">Action</td>
+          <td >Description</td>
+          <td  align="center">Action</td>
         </tr>
         <tr v-for="post in posts" :key="post.id">
           <td>{{ post.title }}</td>
@@ -22,13 +25,16 @@
           </td>
         </tr>
       </table>
-       </b-col>
+    </b-col>
     </div>
     <div v-else>
       There are no posts.. Lets add one now <br /><br />
       <router-link v-bind:to="{ name: 'NewPost' }" class="add_post_link">Add Post</router-link>
     </div>
-  </div>
+    </b-col>
+    <b-col></b-col>
+  </b-row>
+</b-container>
 </template>
 
 <script>
@@ -58,7 +64,7 @@ export default {
 </script>
 <style type="text/css">
 .table-wrap {
-
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
