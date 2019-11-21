@@ -1,4 +1,5 @@
 <template>
+<b-col col lg="12">
   <div class="posts">
     <h1>Posts</h1>
     <div v-if="posts.length > 0" class="table-wrap">
@@ -27,6 +28,7 @@
       <router-link v-bind:to="{ name: 'NewPost' }" class="add_post_link">Add Post</router-link>
     </div>
   </div>
+</b-col>
 </template>
 
 <script>
@@ -56,7 +58,7 @@ export default {
 </script>
 <style type="text/css">
 .table-wrap {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
