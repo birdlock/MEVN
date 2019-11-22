@@ -9,11 +9,11 @@
         <router-link  v-bind:to="{ name: 'NewPost' }" class="add_post_link">Add Post</router-link>
       </div>
       <br>
-    <b-col col lg="12" md='8' sm='12'>
-      <table>
+
+      <table width="100%">
         <tr>
-          <td>Title</td>
-          <td >Description</td>
+          <td align="center">Title</td>
+          <td  align="center">Description</td>
           <td  align="center">Action</td>
         </tr>
         <tr v-for="post in posts" :key="post.id">
@@ -25,7 +25,7 @@
           </td>
         </tr>
       </table>
-    </b-col>
+
     </div>
     <div v-else>
       There are no posts.. Lets add one now <br /><br />
